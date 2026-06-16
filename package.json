@@ -39,8 +39,8 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": ">=20",
-    "pnpm": ">=8"
+    "node": "20.18.0",
+    "pnpm": "8.10.5"
   },
   "license": "MIT",
   "lint-staged": {
@@ -96,6 +96,11 @@
     "test:all:coverage": "pnpm test:all -- -- --coverage",
     "test:coverage": "pnpm test -- -- --coverage",
     "version-packages": "pnpm changeset version && pnpm i --ignore-scripts --lockfile-only --no-frozen-lockfile --reporter=ndjson --stream && git add pnpm-lock.yaml"
+  },
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.34.4"
+    }
   },
   "workspaces": [
     "packages/*",
