@@ -39,7 +39,7 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": "20.18.0",
+    "node": "22.14.0",
     "pnpm": "8.10.5"
   },
   "license": "MIT",
@@ -61,8 +61,8 @@
     "attw:all": "lerna run attw --scope @voltagent/*",
     "biome": "biome",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build --ignore @voltagent/vercel-ai-exporter",
-    "build:all": "lerna run build --scope @voltagent/* --ignore @voltagent/vercel-ai-exporter --scope create-voltagent-app --concurrency 1",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096\" lerna run build --ignore @voltagent/vercel-ai-exporter --concurrency 2",
+    "build:all": "NODE_OPTIONS=\"--max-old-space-size=4096\" lerna run build --scope @voltagent/* --ignore @voltagent/vercel-ai-exporter --scope create-voltagent-app --concurrency 1",
     "build:example": "lerna run build --scope voltagent-basic-example",
     "changeset": "changeset",
     "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
