@@ -97,6 +97,11 @@
     "test:coverage": "pnpm test -- -- --coverage",
     "version-packages": "pnpm changeset version && pnpm i --ignore-scripts --lockfile-only --no-frozen-lockfile --reporter=ndjson --stream && git add pnpm-lock.yaml"
   },
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.34.4"
+    }
+  },
   "workspaces": [
     "packages/*",
     "examples/*",
