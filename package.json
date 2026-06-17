@@ -61,7 +61,7 @@
     "attw:all": "lerna run attw --scope @voltagent/*",
     "biome": "biome",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build --exclude @voltagent/vercel-ai-exporter --exclude assistant-ui-starter --exclude voltagent-example-with-client-side-tools",
+    "build": "lerna run build --ignore @voltagent/vercel-ai-exporter --ignore assistant-ui-starter --ignore voltagent-example-with-client-side-tools",
     "build:all": "NODE_OPTIONS=\"--max-old-space-size=4096\" lerna run build --scope @voltagent/* --ignore @voltagent/vercel-ai-exporter --scope create-voltagent-app --concurrency 1",
     "build:example": "lerna run build --scope voltagent-basic-example",
     "changeset": "changeset",
